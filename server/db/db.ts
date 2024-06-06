@@ -85,7 +85,10 @@ export async function addDrink(data: Drink) {
     strImageSource,
   })
 }
+export async function getDrinkByID(id: string) {
+  return await db('favourites').where('idDrink', id).select('*').first()
+}
 
 export async function deleteDrink(id: string) {
-  await db('favourites').where(id).del()
+  return await db('favourites').where(id).del()
 }

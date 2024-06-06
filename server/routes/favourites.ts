@@ -13,6 +13,19 @@ router.get('/', async (req, res) => {
   }
 })
 
+router.get('/:id', async (req, res) => {
+  try {
+    const id = req.params.id
+    // console.log(id)
+    const drink = await db.getDrinkByID(id)
+    console.log({ drink })
+    res.json({ drink })
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: 'Something went wrong' })
+  }
+})
+
 router.post('/', async (req, res) => {
   try {
     const {
