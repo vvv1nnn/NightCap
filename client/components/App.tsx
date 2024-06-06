@@ -1,11 +1,13 @@
 import { Outlet } from 'react-router-dom'
 import { Header } from './Header'
-import { Alcoholic } from './Alcoholic'
+import { Nav } from './Nav'
+// import { Alcoholic } from './Alcoholic'
 
 function App() {
   return (
     <>
       <Header />
+      <Nav />
       <Outlet />
     </>
   )
