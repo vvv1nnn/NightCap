@@ -2,9 +2,14 @@ export interface Cocktail {
   drinks: Drink[]
 }
 
+export interface CocktailData {
+  drinks: Drink
+}
+
 export interface Drink {
   idDrink: string
   strDrink: string
+  strCategory: string
   strAlcoholic: string
   strGlass: string
   strInstructions: string

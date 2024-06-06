@@ -10,3 +10,21 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.drink {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px;
+  border-color: black;
+  border-style:solid;
+  margin: 10px;
+}
+
+.drink p{
+  text-align: center;
+}
+
+.drinkimage {
+  height:300px
+}

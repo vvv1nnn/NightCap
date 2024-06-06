@@ -1,5 +1,5 @@
 import request from 'superagent'
-import type { Cocktail } from '../../models/cocktail'
+import type { Drink, Cocktail, CocktailData } from '../../models/cocktail'
 
 export async function fetchAlcoholicCocktails() {
   const res = await request.get(
@@ -19,7 +19,7 @@ export async function fetchCocktailById(id: string) {
   const res = await request.get(
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`,
   )
-  return res.body
+  return res.body as CocktailData
 }
 
 export async function fetchCocktailByName(search: string) {
