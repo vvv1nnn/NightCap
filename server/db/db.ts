@@ -90,5 +90,5 @@ export async function getDrinkByID(id: string) {
 }
 
 export async function deleteDrink(id: string) {
-  return await db('favourites').where(id).del()
+  return await db('favourites').where('idDrink', id).del()
 }
