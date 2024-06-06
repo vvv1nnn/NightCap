@@ -19,7 +19,7 @@ export async function fetchCocktailById(id: string) {
   const res = await request.get(
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`,
   )
-  return res.body as CocktailData
+  return res.body as Cocktail
 }
 
 export async function fetchCocktailByName(search: string) {

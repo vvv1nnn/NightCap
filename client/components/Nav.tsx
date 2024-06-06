@@ -9,7 +9,7 @@ export function Nav() {
           <Link to="/">Alcoholic</Link>
         </li>
         <li>
-          <Link to="">Non Alcoholic</Link>
+          <Link to="/non-alcoholic">Non Alcoholic</Link>
         </li>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import { fetchAlcoholicCocktails } from '../apis/cocktails'
-import { Link, useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
+import { Link } from 'react-router-dom'
 
 export function Alcoholic() {
   const { data, isError, isLoading, error } = useQuery({
@@ -20,12 +21,14 @@ export function Alcoholic() {
         <div className="mainContainer">
           {data.drinks.map((drink) => (
             <div key={drink.idDrink} className="drink">
-              <p> {drink.strDrink}</p>
-              <img
-                src={drink.strDrinkThumb}
-                alt={drink.strDrink}
-                className="drinkimage"
-              />
+              <Link to={`/drink/${drink.idDrink}`}>
+                <p> {drink.strDrink}</p>
+                <img
+                  src={drink.strDrinkThumb}
+                  alt={drink.strDrink}
+                  className="drinkimage"
+                />
+              </Link>
             </div>
           ))}
         </div>

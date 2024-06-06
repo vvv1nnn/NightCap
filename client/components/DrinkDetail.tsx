@@ -16,13 +16,15 @@ export function DrinkDetail() {
     return <p>ERROR: {error.message}</p>
   }
   if (data) {
+    console.log(data)
+    const drink = data.drinks[0]
     return (
       <>
-        <h1>{data.drinks.strDrink}</h1>
-        <p>Category: {data.drinks.strCategory}</p>
-        <p>Glass: {data.drinks.strGlass}</p>
-        <p>How To Make: {data.drinks.strInstructions}</p>
-        <img src={data.drinks.strDrinkThumb} alt="" />
+        <h1>{drink.strDrink}</h1>
+        <img src={drink.strDrinkThumb} alt="" />
+        <p>Category: {drink.strCategory}</p>
+        <p>Glass: {drink.strGlass}</p>
+        <p>How To Make: {drink.strInstructions}</p>
       </>
     )
   }
