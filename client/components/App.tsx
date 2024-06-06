@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <Header />
+      <Nav />
       <Outlet />
     </>
   )
