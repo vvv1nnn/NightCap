@@ -45,7 +45,7 @@ export async function addDrink(data: Drink) {
     strMeasure15,
     strImageSource,
   } = data
-  return await db('favourties').insert({
+  return await db('favourites').insert({
     idDrink,
     strDrink,
     strAlcoholic,
