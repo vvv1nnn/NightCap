@@ -1,3 +1,3 @@
 export function Header() {
-  return <h1>NIGHTCAP</h1>
+  return <h1 id="title">NIGHTCAP</h1>
 }
