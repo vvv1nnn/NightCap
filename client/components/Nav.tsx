@@ -11,6 +11,9 @@ export function Nav() {
         <li>
           <Link to="/non-alcoholic">Non Alcoholic</Link>
         </li>
+        <li>
+          <Link to="/favourites">Favourites</Link>
+        </li>
       </ul>
     </div>
   )
