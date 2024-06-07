@@ -8,12 +8,14 @@ import App from './components/App'
 import { Alcoholic } from './components/Alcoholic'
 import { NonAlcoholic } from './components/NonAlcoholic'
 import { DrinkDetail } from './components/DrinkDetail'
+import Search from './components/Search'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<Alcoholic />} />
     <Route path="/non-alcoholic" element={<NonAlcoholic />} />
     <Route path="drink/:id" element={<DrinkDetail />} />
+    <Route path="/search" element={<Search />} />
   </Route>,
 )
 
