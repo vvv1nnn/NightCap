@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchNonAlcoholicCocktails } from '../apis/cocktails'
-import type { Drink } from '../../models/cocktail'
+
 import { Link } from 'react-router-dom'
 
 export function NonAlcoholic() {

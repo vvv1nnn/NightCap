@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import { Link, useSearchParams, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export function Nav() {
-  // const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // setSearchParams({ q: searchQuery })
+
     const search = searchQuery
     setSearchQuery('')
     console.log(searchQuery)
@@ -16,19 +15,6 @@ export function Nav() {
   }
 
   return (
-    <div>
-      <h2>DRANKS</h2>
-      <ul>
-        <li>
-          <Link to="/">Alcoholic</Link>
-        </li>
-        <li>
-          <Link to="/non-alcoholic">Non Alcoholic</Link>
-        </li>
-        <li>
-          <Link to="/favourites">Favourites</Link>
-        </li>
-      </ul>
     <div id="nav">
       <Link to="/">
         <button>Alcoholic</button>
@@ -36,6 +22,10 @@ export function Nav() {
 
       <Link to="/non-alcoholic">
         <button>Non Alcoholic</button>
+      </Link>
+
+      <Link to="/favourites">
+        <button>Favourites</button>
       </Link>
 
       <div>
@@ -46,9 +36,8 @@ export function Nav() {
             value={searchQuery}
             onChange={(event) => setSearchQuery(event.target.value)}
           />
-          {/* <Link to={`/search?q=${searchQuery}`}> */}
+
           <button type="submit">Search</button>
-          {/* </Link> */}
         </form>
       </div>
     </div>

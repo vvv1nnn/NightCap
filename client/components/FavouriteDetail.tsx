@@ -24,10 +24,10 @@ export function FavouriteDetail() {
     console.log(drink)
     return (
       <>
-        <div>
+        <div className="drinkdetail">
           <div>
             <h1>{drink.strDrink}</h1>
-            <img src={drink.strDrinkThumb} alt="" />
+            <img src={drink.strDrinkThumb} alt="" className="drinkimage" />
             <p>Category: {drink.strCategory}</p>
             <p>Glass: {drink.strGlass}</p>
             <ul>
