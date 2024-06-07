@@ -9,6 +9,7 @@ import { Alcoholic } from './components/Alcoholic'
 import { NonAlcoholic } from './components/NonAlcoholic'
 import { DrinkDetail } from './components/DrinkDetail'
 import { FavouritesList } from './components/FavouritesList'
+import { FavouriteDetail } from './components/FavouriteDetail'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
@@ -16,6 +17,7 @@ const routes = createRoutesFromElements(
     <Route path="/non-alcoholic" element={<NonAlcoholic />} />
     <Route path="drink/:id" element={<DrinkDetail />} />
     <Route path="/favourites" element={<FavouritesList />} />
+    <Route path="/favourites/:id" element={<FavouriteDetail />} />
   </Route>,
 )
 
