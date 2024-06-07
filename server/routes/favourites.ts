@@ -42,6 +42,7 @@ router.post('/', async (req, res) => {
     const {
       idDrink,
       strDrink,
+      strCategory,
       strAlcoholic,
       strGlass,
       strInstructions,
@@ -81,6 +82,7 @@ router.post('/', async (req, res) => {
     await db.addDrink({
       idDrink,
       strDrink,
+      strCategory,
       strAlcoholic,
       strGlass,
       strInstructions,

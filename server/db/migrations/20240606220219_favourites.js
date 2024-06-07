@@ -6,6 +6,7 @@ export function up(knex) {
   return knex.schema.createTable('favourites', function (table) {
     table.string('idDrink')
     table.string('strDrink')
+    table.string('strCategory')
     table.string('strAlcoholic')
     table.string('strGlass')
     table.string('strInstructions')

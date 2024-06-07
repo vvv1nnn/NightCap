@@ -9,6 +9,7 @@ export async function seed(knex) {
     {
       idDrink: '001',
       strDrink: 'Test',
+      strCategory: 'Beer',
       strAlcoholic: 'Alchoholic',
       strGlass: 'Cocktail',
       strInstructions: 'blah blah bla',

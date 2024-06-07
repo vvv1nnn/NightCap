@@ -9,6 +9,7 @@ export async function addDrink(data: Drink) {
   const {
     idDrink,
     strDrink,
+    strCategory,
     strAlcoholic,
     strGlass,
     strInstructions,
@@ -48,6 +49,7 @@ export async function addDrink(data: Drink) {
   return await db('favourites').insert({
     idDrink,
     strDrink,
+    strCategory,
     strAlcoholic,
     strGlass,
     strInstructions,
