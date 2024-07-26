@@ -10,3 +10,7 @@ export async function fetchFavouriteById(id: string) {
   const res = await request.get(`/api/v1/favourites/${id}`)
   return res.body.drink as Drink
 }
+
+export async function deleteFavouriteById(id: string) {
+  await request.del(`/api/v1/favourites/${id}`)
+}
